@@ -81,15 +81,58 @@ b {
 .wrapper {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
     padding: 0 10%;
     overflow: hidden;
 }
 
+.wrapper::before {
+    position: absolute;
+    content: '';
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object2 6s linear infinite;
+}
+
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 41%;
+    }
+}
+
+@keyframes object2 {
+    50% {
+        left: 35%;
+        top: 10%;
+    }
+}
+
 .cols {
     width: 50%;
+}
+
+.cols0 {
+    width: 60%;
+    z-index: 5;
 }
 
 .topline {
@@ -111,7 +154,7 @@ b {
 
 h1 {
     display: block;
-    font-size: 7em;
+    font-size: 65px;
     font-weight: 900;
     color: #3d535f;
 }
@@ -124,21 +167,21 @@ h1 {
 p {
     display: block;
     width: 90%;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #3d535f;
 }
 
 .btns {
     width: 100%;
     position: relative;
-    left: 150px;
+    left: 15%;
 }
 
 button {
     outline: none;
     border: none;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 400;
     color: #f3f5f8;
     background-color: #3d535f;
@@ -153,4 +196,44 @@ button:hover {
     background-color: #7f00ff;
     transform: translateY(-10px);
     transition: all 0.3s;
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.imgbox img {
+    position: relative;
+    height: 80%;
+    width: calc(110% - 80px);
+    top: 50px;
+    right: 10px;
+    animation: animateUser 4s linear infinite;
+}
+
+@keyframes animateUser {
+    50% {
+        right: 20px;
+        top: 60px;
+    }
+}
+
+.imgbox #splash {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-75deg);
+    width: 120%;
+    filter: saturate(200%);
+    animation: animateSplash 4s linear infinite;
+}
+
+@keyframes animateSplash {
+    50% {
+        top: 54%;
+        left: 51%;
+        width: 115%;
+    }
 }

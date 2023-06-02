@@ -19,16 +19,17 @@
                     <li><a href="#">Skills</a></li>
                 </ul>
                 <div class="links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/l%E1%BB%99c-l%C3%AA-ph%C6%B0%E1%BB%9Bc-gia-046231275/"
+                        target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/blackcat22521" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/loc.le22521" target="_blank"><i class="fab fa-facebook"></i></a>
                 </div>
             </nav>
 
             <div class="wrapper">
                 <div class="cols cols0">
                     <span class="topline">Hello</span>
-                    <h1>I'm a <span class="multiText">Coder</span></h1>
+                    <h1>I'm a <span class="multiText"></span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum labore pariatur, velit laborum
                         quidem, obcaecati at voluptatibus esse.</p>
                     <div class="btns">
@@ -38,11 +39,22 @@
                 </div>
                 <div class="cols cols1">
                     <div class="imgbox">
-                        <img src="" alt="" id="splash">
-                        <img src="" alt="">
+                        <img src="splash.png" alt="paint" id="splash">
+                        <img src="lok.png" alt="LokLok">
                     </div>
                 </div>
             </div>
         </div>
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typingEffect = new Typed(".multiText", {
+                strings: ["coder", "designer", "lord"],
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 80,
+                backDelay: 1500
+            })
+        </script>
     </body>
 </html>
